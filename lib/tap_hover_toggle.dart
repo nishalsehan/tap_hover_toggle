@@ -3,7 +3,7 @@ library tap_hover_toggle;
 import 'package:flutter/material.dart';
 
 class TapHoverToggle extends StatefulWidget{
-  final Widget Function(bool) builder;
+  final Widget Function(bool isHoverOrTap) builder;
   final void Function()? onClick;
   const TapHoverToggle({super.key, required this.builder, this.onClick});
 
@@ -13,39 +13,42 @@ class TapHoverToggle extends StatefulWidget{
 
 class TapHoverToggleState extends State<TapHoverToggle>{
 
-  bool hover = false;
+  bool isHoverOrTap = false;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: widget.onClick,
+      splashColor: Colors.transparent,
+      highlightColor: Colors.transparent,
+      hoverColor: Colors.transparent,
       onTapUp: (event){
         setState((){
-          hover = false;
+          isHoverOrTap = false;
         });
       },
       onTapDown: (event){
         setState((){
-          hover = true;
+          isHoverOrTap = true;
         });
       },
       onTapCancel: (){
         setState((){
-          hover = false;
+          isHoverOrTap = false;
         });
       },
       child: MouseRegion(
           onEnter: (event){
             setState((){
-              hover = true;
+              isHoverOrTap = true;
             });
           },
           onExit: (event){
             setState((){
-              hover = false;
+              isHoverOrTap = false;
             });
           },
-          child: widget.builder(hover)
+          child: widget.builder(isHoverOrTap)
       ),
     );
   }

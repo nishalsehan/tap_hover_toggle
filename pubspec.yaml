@@ -1,7 +1,7 @@
 name: tap_hover_toggle
-description: A new Flutter package project.
+description: The TapHoverToggle Flutter plugin is a versatile solution for interactive UI elements with can listen on tap and hover functionality.
 version: 0.0.1
-homepage:
+homepage: https://github.com/nishalsehan/tap_hover_toggle
 
 environment:
   sdk: '>=2.18.0 <4.0.0'
