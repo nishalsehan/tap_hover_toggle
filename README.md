@@ -2,6 +2,8 @@
 
 A Flutter plugin that provides a versatile widget for handling tap and hover interactions. This widget allows you to easily detect taps and hover events on any of its child widgets, making it a valuable addition to your Flutter app's UI toolkit.
 
+![demo](https://github.com/nishalsehan/tap_hover_toggle/assets/44578204/e470baf2-2c23-4d08-92aa-bbd0fe1e97d9)
+
 ## Features
 
 - Easily integrate tap and hover functionality into your Flutter app.
