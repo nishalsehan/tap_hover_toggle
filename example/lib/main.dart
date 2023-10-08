@@ -16,10 +16,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Tap Hover Toggle Example',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        useMaterial3: true,
-        textTheme: GoogleFonts.latoTextTheme()
-      ),
+      theme:
+          ThemeData(useMaterial3: true, textTheme: GoogleFonts.latoTextTheme()),
       home: const MyHomePage(title: 'Tap Hover Toggle Demo'),
     );
   }
@@ -34,7 +32,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -50,22 +47,22 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TapHoverToggle(
-                builder: (isHoverOrTap){
+                builder: (isHoverOrTap) {
                   return Container(
                     decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        color: isHoverOrTap?const Color(0xFF4267B2):Colors.white,
+                        color: isHoverOrTap
+                            ? const Color(0xFF4267B2)
+                            : Colors.white,
                         border: Border.all(
-                            color:  isHoverOrTap?const Color(0xFF4267B2):Colors.black12,
-                            width: 1
-                        )
-                    ),
+                            color: isHoverOrTap
+                                ? const Color(0xFF4267B2)
+                                : Colors.black12,
+                            width: 1)),
                     padding: const EdgeInsets.all(12),
-                    child: Icon(
-                        FontAwesomeIcons.facebookF,
+                    child: Icon(FontAwesomeIcons.facebookF,
                         size: 16,
-                        color:  isHoverOrTap?Colors.white:Colors.black38
-                    ),
+                        color: isHoverOrTap ? Colors.white : Colors.black38),
                   );
                 },
               ),
@@ -73,22 +70,22 @@ class _MyHomePageState extends State<MyHomePage> {
                 width: 12,
               ),
               TapHoverToggle(
-                builder: (isHoverOrTap){
+                builder: (isHoverOrTap) {
                   return Container(
                     decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        color: isHoverOrTap?const Color(0xFF1DA1F2):Colors.white,
+                        color: isHoverOrTap
+                            ? const Color(0xFF1DA1F2)
+                            : Colors.white,
                         border: Border.all(
-                            color:  isHoverOrTap?const Color(0xFF1DA1F2):Colors.black12,
-                            width: 1
-                        )
-                    ),
+                            color: isHoverOrTap
+                                ? const Color(0xFF1DA1F2)
+                                : Colors.black12,
+                            width: 1)),
                     padding: const EdgeInsets.all(12),
-                    child: Icon(
-                        FontAwesomeIcons.twitter,
+                    child: Icon(FontAwesomeIcons.twitter,
                         size: 16,
-                        color:  isHoverOrTap?Colors.white:Colors.black38
-                    ),
+                        color: isHoverOrTap ? Colors.white : Colors.black38),
                   );
                 },
               ),
@@ -96,22 +93,22 @@ class _MyHomePageState extends State<MyHomePage> {
                 width: 12,
               ),
               TapHoverToggle(
-                builder: (isHoverOrTap){
+                builder: (isHoverOrTap) {
                   return Container(
                     decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        color: isHoverOrTap?const Color(0xFF25D366):Colors.white,
+                        color: isHoverOrTap
+                            ? const Color(0xFF25D366)
+                            : Colors.white,
                         border: Border.all(
-                            color:  isHoverOrTap?const Color(0xFF25D366):Colors.black12,
-                            width: 1
-                        )
-                    ),
+                            color: isHoverOrTap
+                                ? const Color(0xFF25D366)
+                                : Colors.black12,
+                            width: 1)),
                     padding: const EdgeInsets.all(12),
-                    child: Icon(
-                        FontAwesomeIcons.whatsapp,
+                    child: Icon(FontAwesomeIcons.whatsapp,
                         size: 16,
-                        color:  isHoverOrTap?Colors.white:Colors.black38
-                    ),
+                        color: isHoverOrTap ? Colors.white : Colors.black38),
                   );
                 },
               ),
@@ -119,22 +116,22 @@ class _MyHomePageState extends State<MyHomePage> {
                 width: 12,
               ),
               TapHoverToggle(
-                builder: (isHoverOrTap){
+                builder: (isHoverOrTap) {
                   return Container(
                     decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        color: isHoverOrTap?const Color(0xFFE60023):Colors.white,
+                        color: isHoverOrTap
+                            ? const Color(0xFFE60023)
+                            : Colors.white,
                         border: Border.all(
-                            color:  isHoverOrTap?const Color(0xFFE60023):Colors.black12,
-                            width: 1
-                        )
-                    ),
+                            color: isHoverOrTap
+                                ? const Color(0xFFE60023)
+                                : Colors.black12,
+                            width: 1)),
                     padding: const EdgeInsets.all(12),
-                    child: Icon(
-                        FontAwesomeIcons.pinterest,
+                    child: Icon(FontAwesomeIcons.pinterest,
                         size: 16,
-                        color:  isHoverOrTap?Colors.white:Colors.black38
-                    ),
+                        color: isHoverOrTap ? Colors.white : Colors.black38),
                   );
                 },
               ),
@@ -142,46 +139,47 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           const SizedBox(height: 30),
           SizedBox(
-            width: size.width*0.8,
+            width: size.width * 0.8,
             child: TapHoverToggle(
-              builder: (isHoverOrTap){
+              builder: (isHoverOrTap) {
                 return Container(
                     decoration: BoxDecoration(
-                        borderRadius: const BorderRadius.all(Radius.circular(8)),
-                        color:  isHoverOrTap?null: Colors.blueAccent,
-                        border: Border.all(
-                            color: Colors.blueAccent,
-                            width: 1.5
-                        )
-                    ),
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(8)),
+                        color: isHoverOrTap ? null : Colors.blueAccent,
+                        border:
+                            Border.all(color: Colors.blueAccent, width: 1.5)),
                     padding: const EdgeInsets.symmetric(vertical: 12),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text(
-                            "Tap to Continue",
+                        Text("Tap to Continue",
                             textAlign: TextAlign.center,
-                            style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                                letterSpacing: 0.6,
-                                fontWeight: FontWeight.w700,
-                                color: isHoverOrTap?Colors.blueAccent:Colors.white,
-                                height: 1.4
-                            )
-                        ),
+                            style: Theme.of(context)
+                                .textTheme
+                                .titleMedium!
+                                .copyWith(
+                                    letterSpacing: 0.6,
+                                    fontWeight: FontWeight.w700,
+                                    color: isHoverOrTap
+                                        ? Colors.blueAccent
+                                        : Colors.white,
+                                    height: 1.4)),
                       ],
-                    )
-                );
+                    ));
               },
             ),
           ),
           const SizedBox(height: 24),
           SizedBox(
-            width: size.width*0.8,
+            width: size.width * 0.8,
             child: TapHoverToggle(
-              builder: (isHoverOrTap){
+              builder: (isHoverOrTap) {
                 return Image(
-                  image: AssetImage(isHoverOrTap?'assets/images/bulb_on.JPEG':'assets/images/bulb_off.JPEG'),
-                  height: size.height*0.3,
+                  image: AssetImage(isHoverOrTap
+                      ? 'assets/images/bulb_on.JPEG'
+                      : 'assets/images/bulb_off.JPEG'),
+                  height: size.height * 0.3,
                 );
               },
             ),

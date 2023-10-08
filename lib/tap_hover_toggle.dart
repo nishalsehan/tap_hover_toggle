@@ -2,7 +2,8 @@ library tap_hover_toggle;
 
 import 'package:flutter/material.dart';
 
-class TapHoverToggle extends StatefulWidget{
+class TapHoverToggle extends StatefulWidget {
+  ///builder function which return widget
   final Widget Function(bool isHoverOrTap) builder;
   final void Function()? onClick;
   const TapHoverToggle({super.key, required this.builder, this.onClick});
@@ -11,8 +12,8 @@ class TapHoverToggle extends StatefulWidget{
   State<StatefulWidget> createState() => TapHoverToggleState();
 }
 
-class TapHoverToggleState extends State<TapHoverToggle>{
-
+class TapHoverToggleState extends State<TapHoverToggle> {
+  ///initialize the bool status
   bool isHoverOrTap = false;
 
   @override
@@ -22,34 +23,43 @@ class TapHoverToggleState extends State<TapHoverToggle>{
       splashColor: Colors.transparent,
       highlightColor: Colors.transparent,
       hoverColor: Colors.transparent,
-      onTapUp: (event){
-        setState((){
+
+      ///trigger when tap-in release
+      onTapUp: (event) {
+        setState(() {
           isHoverOrTap = false;
         });
       },
-      onTapDown: (event){
-        setState((){
+
+      ///trigger when tap-in
+      onTapDown: (event) {
+        setState(() {
           isHoverOrTap = true;
         });
       },
-      onTapCancel: (){
-        setState((){
+
+      ///trigger when tap in end
+      onTapCancel: () {
+        setState(() {
           isHoverOrTap = false;
         });
       },
       child: MouseRegion(
-          onEnter: (event){
-            setState((){
+
+          ///trigger when cursor enter the widget zone
+          onEnter: (event) {
+            setState(() {
               isHoverOrTap = true;
             });
           },
-          onExit: (event){
-            setState((){
+
+          ///trigger when cursor go outside the widget zone
+          onExit: (event) {
+            setState(() {
               isHoverOrTap = false;
             });
           },
-          child: widget.builder(isHoverOrTap)
-      ),
+          child: widget.builder(isHoverOrTap)),
     );
   }
 }
