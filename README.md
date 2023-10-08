@@ -4,8 +4,7 @@ A Flutter plugin that provides a versatile widget for handling tap and hover int
 
 | Mobile | Web |
 |:------------------:|:------------------:|
-| ![demo](https://github.com/nishalsehan/tap_hover_toggle/assets/44578204/e470baf2-2c23-4d08-92aa-bbd0fe1e97d9)   | ![demo](https://github.com/nishalsehan/tap_hover_toggle/assets/44578204/33bdf640-760c-4ccc-bf26-9405b9a05aef) |
-
+| ![demo](https://github.com/nishalsehan/tap_hover_toggle/assets/44578204/73b86e56-881a-45d9-b9e4-f3c046dfef0c)   | ![demo](https://github.com/nishalsehan/tap_hover_toggle/assets/44578204/33bdf640-760c-4ccc-bf26-9405b9a05aef) |
 
 ## Features
 
